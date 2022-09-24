@@ -6,12 +6,15 @@ var currHour =  moment().hours();
 var texts = document.querySelectorAll('.description');
 var currentList = 0;
 
-var tArea = document.querySelectorAll('.row');
-var todo = "";
+var buttons = document.querySelectorAll('.saveBtn');
 
 function logTime(){
         hours.forEach(hour => { // grabs each row and runs the function compareTime for each
         compareTime(hour);
+        var todos = localStorage.getItem(hour.childNodes[1].textContent);
+        if (todos !== null){
+            hour.childNodes[3].value = todos;
+        }
     });
 }
 
@@ -34,18 +37,7 @@ function logText(){
 }
 
 function saveToDo(element){
-    var text = element.childNodes[3].value;
-    localStorage.setItem(todo, text.value);
-    console.log(element.childNodes[3].value);
+    localStorage.setItem(element.childNodes[1].textContent, element.childNodes[3].value);
 }
-
-function loadText(){
-    var textL = localStorage.getItem(todo);
-    hours.childNodes[3].value = textL;
-};
-
 logTime();
-console.log(document.querySelector('.row').childNodes);
-hours.forEach(text => {
-    loadText(text);
-});
+buttons.forEach(b => b.addEventListener('click', event => saveToDo(event.target.parentNode)));
