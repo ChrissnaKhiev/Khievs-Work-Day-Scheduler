@@ -6,9 +6,9 @@ This is a website that is a day planner.
 
 ![Website Appearance](./assets/website.png)
 
-Khiev's Coding Quiz: [Link](https://chrissnakhiev.github.io/Khievs-Work-Day-Scheduler/)
+Khiev's Work Day Scheduler: [Link](https://chrissnakhiev.github.io/Khievs-Work-Day-Scheduler/)
 
-Khievs-Coding-Quiz github: [Link](https://github.com/ChrissnaKhiev/Khievs-Work-Day-Scheduler)
+Khievs-Work-Day-Scheduler github: [Link](https://github.com/ChrissnaKhiev/Khievs-Work-Day-Scheduler)
 
 This is a day planner for the work day of 9 to 5. You can add todos into the planner and save it so it will remain there even if you leave the page. This remains because of the local storage. As the hours change during the day, the planner will auto organize the agenda via colors depending on past, present, and future.
 
